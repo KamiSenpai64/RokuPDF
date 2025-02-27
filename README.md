@@ -19,8 +19,14 @@ sudo apt install rofi``
 #### Arch Linux: 
 ``sudo pacman -S rofi``
 #### Fedora: 
-``sudo dnf install rofi``
+``
+sudo dnf install rofi
+``
 #### OpenSUSE: 
-``sudo zypper install rofi``
+``
+sudo zypper install rofi
+``
 #### Gentoo: 
-``sudo emerge rofi``
+``
+sudo emerge rofi
+``
