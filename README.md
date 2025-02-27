@@ -53,21 +53,21 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 
 #### Navigate to the project directory:
 
-    ``cd RokuPDF``
+    cd RokuPDF
 
 #### Make the script executable (if applicable):
 
-    ``chmod +x rofi-PDF.sh``
+    chmod +x rofi-PDF.sh
 
 #### Add the script to your system's PATH or launch it directly from the terminal:
 
-    ``./rofi-PDF.sh``
+    ./rofi-PDF.sh
 
 ### Usage
 
    - Run the main script: To open the Rofi file selection menu and start browsing directories, run:
 
-    ``./rofi-PDF.sh``
+    ./rofi-PDF.sh
 
    - Selecting a file: Once inside a directory, you'll see a list of available PDF and EPUB files. Select a file to open it in Okular.
 
