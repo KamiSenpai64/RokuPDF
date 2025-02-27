@@ -9,8 +9,24 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 - Modular design for easy customization and maintenance.
 - ESC key support to navigate back to previous menu when inside a directory.
 
-## Installation
+# Dependencies
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/KamiSenpai64/RokuPDF.git
+## Rofi
+
+##### Debian/Ubuntu:
+``sudo apt update
+sudo apt install rofi``
+
+#### Arch Linux: 
+``sudo pacman -S rofi``
+
+#### Fedora: 
+``sudo dnf install rofi``
+
+#### OpenSUSE: 
+``sudo zypper install rofi``
+
+#### Gentoo: 
+``sudo emerge rofi``
+
+
