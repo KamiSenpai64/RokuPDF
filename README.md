@@ -30,3 +30,17 @@ sudo zypper install rofi
 ``
 sudo emerge rofi
 ``
+
+## Okular
+
+#### Debian/Ubuntu: 
+``sudo apt update
+sudo apt install okular``
+#### Arch Linux: 
+``sudo pacman -S okular``
+#### Fedora:
+``sudo dnf install okular``
+#### OpenSUSE:
+``sudo zypper install rofi``
+#### Gentoo:
+``sudo emerge rofi``
