@@ -33,26 +33,41 @@ navigate() {
         last_opened=""
         [ -f "$LAST_OPENED_FILE" ] && last_opened=$(cat "$LAST_OPENED_FILE")
 
-        mapfile -t files < <(find "$current_dir" -mindepth 1 -maxdepth 1 2>/dev/null)
-        for entry in "${files[@]}"; do
-            [ -e "$entry" ] || continue
-            name=$(basename "$entry")
-            icon=""
-            if [ -d "$entry" ]; then
-                icon="${ICONS[folder]}"
-            elif [[ "$entry" == *.pdf ]]; then
-                icon="${ICONS[pdf]}"
-            elif [[ "$entry" == *.epub ]]; then
-                icon="${ICONS[epub]}"
-            fi
+        # Collect directories, PDFs, and EPUBs
+        mapfile -t dirs < <(find "$current_dir" -mindepth 1 -maxdepth 1 -type d 2>/dev/null)
+        mapfile -t pdfs < <(find "$current_dir" -mindepth 1 -maxdepth 1 -iname "*.pdf" 2>/dev/null)
+        mapfile -t epubs < <(find "$current_dir" -mindepth 1 -maxdepth 1 -iname "*.epub" 2>/dev/null)
 
-            if [ "$entry" = "$last_opened" ]; then
-                entries=("${ICONS[star]} $icon $name" "${entries[@]}")
+        # Add directories (no sorting)
+        for entry in "${dirs[@]}"; do
+            name=$(basename "$entry")
+            entries+=("${ICONS[folder]} $name")
+        done
+
+        # Sort PDFs and EPUBs alphabetically
+        sorted_pdfs=$(printf "%s\n" "${pdfs[@]}" | sort)
+        sorted_epubs=$(printf "%s\n" "${epubs[@]}" | sort)
+
+        # If a file is the last opened, add it first (at the top of the list)
+        for file in $sorted_pdfs; do
+            name=$(basename "$file")
+            if [ "$file" == "$last_opened" ]; then
+                entries=("${ICONS[star]} ${ICONS[pdf]} $name" "${entries[@]}")
             else
-                entries+=("$icon $name")
+                entries+=("${ICONS[pdf]} $name")
             fi
         done
 
+        for file in $sorted_epubs; do
+            name=$(basename "$file")
+            if [ "$file" == "$last_opened" ]; then
+                entries=("${ICONS[star]} ${ICONS[epub]} $name" "${entries[@]}")
+            else
+                entries+=("${ICONS[epub]} $name")
+            fi
+        done
+
+        # Show files in Rofi, let the user select one
         chosen=$(printf "%s\n" "${entries[@]}" | rofi -dmenu -i -kb-cancel "Escape" -p "$(basename "$current_dir")")
 
         if [ -z "$chosen" ]; then
@@ -86,3 +101,4 @@ navigate() {
 }
 
 navigate "$BASE_DIR"
+
