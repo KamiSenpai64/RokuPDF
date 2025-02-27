@@ -49,7 +49,7 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 
    - Clone this repository to your local machine:
 
-    ``git clone https://github.com/KamiSenpai64/RokuPDF.git``
+    git clone https://github.com/KamiSenpai64/RokuPDF.git
 
 #### Navigate to the project directory:
 
