@@ -32,7 +32,7 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 
 ### Install Okular
 
-####Debian/Ubuntu:
+#### Debian/Ubuntu:
 
     sudo apt update
     sudo apt install okular
