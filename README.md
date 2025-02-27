@@ -11,36 +11,5 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 
 # Dependencies
 
-## Rofi
-
-##### Debian/Ubuntu:
-``sudo apt update
-sudo apt install rofi``
-#### Arch Linux: 
-``sudo pacman -S rofi``
-#### Fedora: 
-``
-sudo dnf install rofi
-``
-#### OpenSUSE: 
-``
-sudo zypper install rofi
-``
-#### Gentoo: 
-``
-sudo emerge rofi
-``
-
-## Okular
-
-#### Debian/Ubuntu: 
-``sudo apt update
-sudo apt install okular``
-#### Arch Linux: 
-``sudo pacman -S okular``
-#### Fedora:
-``sudo dnf install okular``
-#### OpenSUSE:
-``sudo zypper install rofi``
-#### Gentoo:
-``sudo emerge rofi``
+- [Rofi](https://github.com/davatorium/rofi) 
+- [Okular](https://github.com/KDE/okular)
