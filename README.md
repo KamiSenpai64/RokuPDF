@@ -39,11 +39,11 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 
 #### Arch Linux:
 
-    ``sudo pacman -S okular``
+    sudo pacman -S okular
 
 #### Void Linux:
 
-    ``sudo xbps-install -S okular``
+    sudo xbps-install -S okular
 
 ### Installation Steps
 
