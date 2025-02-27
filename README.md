@@ -18,10 +18,8 @@ RokuPDF is a modular i3wm script for navigating directories and opening PDF and 
 
 #### Install Rofi
 ##### Debian/Ubuntu:
-    ``
     sudo apt update
     sudo apt install rofi
-    ``
 #### Arch Linux:
 
     ``sudo pacman -S rofi``
