@@ -43,5 +43,3 @@ fi
 
 echo "$chosen" > "$CONFIG_FILE"
 notify-send "Directory changed to: $chosen"
-
-# test
