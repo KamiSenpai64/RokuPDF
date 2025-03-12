@@ -8,12 +8,12 @@ RECENT_DIRS_FILE="$SCRIPT_DIR/recent_dirs.txt"
 
 # Icons
 declare -A ICONS=(
-    [folder]='📂'
-    [pdf]='📄'
-    [epub]='📖'
+    [folder]=''
+    [pdf]=''
+    [epub]=''
     [star]='⭐'
-    [back]='🔙'
-    [change]='🔄'
+    [back]='󰌍'
+    [change]=''
 )
 
 # Get the base directory from config
