@@ -94,7 +94,7 @@ navigate() {
             navigate "$selected"
         elif [[ "$selected" == *.pdf || "$selected" == *.epub ]]; then
             echo "$selected" > "$LAST_OPENED_FILE"
-            setsid foliate "$selected" >/dev/null 2>&1 &
+            setsid okular "$selected" >/dev/null 2>&1 &
             exit
         fi
     done
